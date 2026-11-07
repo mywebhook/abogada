@@ -340,8 +340,20 @@
     });
   }
 
+  /* ------------------------------------------------ Altura de la tarjeta
+     Las caras son absolutas: si el reverso tiene más contenido del que cabe
+     (muchos datos o pantallas estrechas), se alarga la tarjeta para que nada
+     quede cortado. */
+  function fitCard() {
+    card.style.minHeight = '';
+    const need = Math.max(front.scrollHeight, back.scrollHeight);
+    if (need > card.offsetHeight + 1) card.style.minHeight = `${Math.ceil(need)}px`;
+  }
+  let fitTimer;
+  window.addEventListener('resize', () => { clearTimeout(fitTimer); fitTimer = setTimeout(fitCard, 120); });
+
   /* --------------------------------------------------------- Entrada */
-  const ready = () => requestAnimationFrame(() => document.body.classList.add('is-ready'));
+  const ready = () => { fitCard(); requestAnimationFrame(() => document.body.classList.add('is-ready')); };
   const fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
   Promise.race([fontsReady, new Promise((r) => setTimeout(r, 1200))]).then(ready);
 })();

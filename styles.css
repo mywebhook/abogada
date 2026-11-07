@@ -242,6 +242,8 @@ img { display: block; }
   text-transform: uppercase;
   color: var(--gray);
   white-space: nowrap;
+  max-height: calc(100% - 54px);
+  overflow: hidden;
 }
 .vertical-label .sep {
   display: inline-block;
@@ -531,12 +533,13 @@ img { display: block; }
 
 .contacts {
   list-style: none;
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 0;
 }
+/* Centrado "seguro": si la lista no cabe, crece hacia abajo y no tapa el título */
+.contacts li:first-child { margin-top: auto; }
+.contacts li:last-child { margin-bottom: auto; }
 
 .contact {
   position: relative;
@@ -545,7 +548,7 @@ img { display: block; }
   grid-template-columns: 82px 1fr 14px;
   align-items: center;
   gap: 12px;
-  padding: 12px 0;
+  padding: 11px 0;
   border-bottom: 1px solid var(--hair-ink);
   text-align: left;
   color: var(--ink);

@@ -1,18 +1,21 @@
 /* ==========================================================================
    DATOS DE LA TARJETA — edita solo este archivo.
-   Los campos vacíos ("") se muestran como "dato pendiente" en la tarjeta
-   y sus botones avisan de que falta completarlos. No se inventa nada.
+   Los campos vacíos ("") se muestran como "Por definir" en la tarjeta
+   y sus botones avisan de que falta completarlos.
+
+   ⚠ PERFIL FICTICIO DE DEMOSTRACIÓN (ver peril_abogada.md).
+     Sustituir por datos reales y verificables antes de publicar.
    ========================================================================== */
 
 window.CARD_CONFIG = {
   /* Identidad ------------------------------------------------------------ */
-  nombre: "Nombre",                  // Ej.: nombre de pila
-  apellidos: "Apellido",             // Ej.: apellidos (el primero forma el monograma)
+  nombre: "Valeria",                 // Nombre de pila
+  apellidos: "Mendoza Rojas",        // Apellidos (el primero forma el monograma)
   titulo: "Abogada",
-  especialidad: "Especialidad jurídica",
-  despacho: "",                      // Nombre del despacho / firma (opcional)
-  ciudad: "",                        // Ciudad o país (opcional)
-  matricula: "",                     // Nº de colegiatura / matrícula (opcional)
+  especialidad: "Derecho civil, familiar y comercial",
+  despacho: "Mendoza Consultora Legal",
+  ciudad: "Santa Cruz",
+  matricula: "",                     // Nº de matrícula profesional (dato real pendiente)
 
   /* Fotografía -------------------------------------------------------------
      Retrato vertical (proporción 4:5 o 3:4), mínimo 1000 px de alto,
@@ -20,13 +23,13 @@ window.CARD_CONFIG = {
   foto: "assets/foto.jpg",
 
   /* Contacto -------------------------------------------------------------- */
-  telefono: "",                      // Formato internacional, ej.: "+00 000 000 000"
-  whatsapp: "",                      // Con código de país; si se deja vacío usa el teléfono
-  whatsappMensaje: "Hola, me gustaría realizar una consulta.",
-  email: "",
-  direccion: "",                     // Dirección profesional completa
-  mapsUrl: "",                       // Enlace de Google Maps (opcional; si no, se busca la dirección)
-  web: "",                           // Sitio web (opcional)
+  telefono: "+591 710 45678",
+  whatsapp: "+591 710 45678",
+  whatsappMensaje: "Hola, Dra. Mendoza. Me gustaría realizar una consulta jurídica.",
+  email: "contacto@mendozaconsultoralegal.example",
+  direccion: "Av. San Martín, Edif. Empresarial, Of. 304",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Av.+San+Mart%C3%ADn+Santa+Cruz+de+la+Sierra+Bolivia",
+  web: "www.mendozaconsultoralegal.example",
 
   /* Agenda -----------------------------------------------------------------
      Enlace de Calendly, Google Calendar, etc. Si se deja vacío, el botón
@@ -35,9 +38,9 @@ window.CARD_CONFIG = {
 
   /* Redes sociales (deja vacías las que no uses) -------------------------- */
   redes: {
-    linkedin: "",
-    instagram: "",
-    facebook: "",
+    linkedin: "https://www.linkedin.com/in/valeria-mendoza-abogada",
+    instagram: "https://www.instagram.com/abg.valeriamendoza",
+    facebook: "https://www.facebook.com/mendozaconsultoralegal",
     x: "",
     tiktok: ""
   }
