@@ -1,0 +1,5 @@
+- Asesores inmobiliarios: ayudan a comprar, vender y alquilar propiedades.
+- Agentes inmobiliarios: intermedian entre compradores, vendedores y propietarios.
+- Corredores inmobiliarios: profesionales dedicados a la intermediación inmobiliaria.
+- Brokers inmobiliarios: gestionan oficinas, equipos y operaciones inmobiliarias.
+- Gerentes inmobiliarios: administran y dirigen equipos u oficinas.
