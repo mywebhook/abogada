@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="dark">
+  <title>Abogada · Tarjeta Digital</title>
+  <meta name="description" content="Tarjeta digital profesional.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Abogada · Tarjeta Digital">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="stage">
+    <div class="card" id="card">
+      <div class="card__inner">
+
+        <!-- ============================ ANVERSO ============================ -->
+        <section class="face face--front" id="front" aria-label="Anverso de la tarjeta">
+          <header class="front__top reveal" style="--d:.15s">
+            <div class="monogram" aria-hidden="true">
+              <span class="monogram__a" data-i1></span>
+              <i class="monogram__rule"></i>
+              <span class="monogram__b" data-i2></span>
+            </div>
+            <p class="eyebrow" data-field="despacho" data-placeholder="Despacho Jurídico"></p>
+          </header>
+
+          <div class="front__visual">
+            <p class="vertical-label reveal" style="--d:.9s" id="verticalLabel"></p>
+
+            <figure class="portrait" id="portrait">
+              <span class="portrait__frame" aria-hidden="true"></span>
+              <div class="portrait__media">
+                <img id="photo" alt="" decoding="async">
+                <div class="portrait__fallback" aria-hidden="true">
+                  <span class="portrait__mono" data-initials></span>
+                  <span class="portrait__caption">Fotografía profesional<br>assets/foto.jpg</span>
+                </div>
+              </div>
+            </figure>
+
+            <p class="signature" data-signature aria-hidden="true"></p>
+          </div>
+
+          <div class="front__text">
+            <h1 class="name reveal" style="--d:.45s">
+              <span class="name__first" data-field="nombre"></span>
+              <span class="name__last" data-field="apellidos"></span>
+            </h1>
+            <span class="rule" aria-hidden="true"></span>
+            <p class="role reveal" style="--d:.75s" data-field="titulo"></p>
+            <p class="specialty reveal" style="--d:.85s" data-field="especialidad"></p>
+          </div>
+
+          <footer class="front__bottom reveal" style="--d:1.1s">
+            <span class="index">01 <i>/</i> 02</span>
+            <button class="link-btn" type="button" data-go="back">
+              Contacto <span class="arr" aria-hidden="true"></span>
+            </button>
+          </footer>
+        </section>
+
+        <!-- ============================ REVERSO ============================ -->
+        <section class="face face--back" id="back" aria-label="Reverso de la tarjeta: contacto">
+          <header class="back__top">
+            <div class="monogram monogram--ink" aria-hidden="true">
+              <span class="monogram__a" data-i1></span>
+              <i class="monogram__rule"></i>
+              <span class="monogram__b" data-i2></span>
+            </div>
+            <div class="back__id">
+              <p class="back__name" data-fullname></p>
+              <p class="back__role" id="backRole"></p>
+            </div>
+          </header>
+
+          <div class="back__head">
+            <p class="back__eyebrow">Contacto directo</p>
+            <h2 class="back__title">A su <em>disposición</em></h2>
+          </div>
+
+          <ul class="contacts" id="contacts"></ul>
+
+          <div class="actions">
+            <button class="btn btn--solid" type="button" id="saveContact">
+              <span>Guardar contacto</span>
+            </button>
+            <a class="btn btn--line" id="schedule" href="#" rel="noopener">
+              <span>Agendar consulta</span>
+            </a>
+          </div>
+
+          <footer class="back__bottom">
+            <button class="link-btn link-btn--ink link-btn--rev" type="button" data-go="front">
+              <span class="arr" aria-hidden="true"></span> Anverso
+            </button>
+            <button class="link-btn link-btn--ink link-btn--plain" type="button" id="share">Compartir</button>
+            <span class="index index--ink">02 <i>/</i> 02</span>
+          </footer>
+        </section>
+
+      </div>
+    </div>
+
+    <nav class="switch reveal" style="--d:1.3s" aria-label="Caras de la tarjeta">
+      <button class="switch__btn" type="button" data-side="front" aria-pressed="true"><em>I</em>Anverso</button>
+      <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+      <button class="switch__btn" type="button" data-side="back" aria-pressed="false"><em>II</em>Reverso</button>
+    </nav>
+    <p class="hint reveal" style="--d:1.45s">Toque o deslice la tarjeta para girarla</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
